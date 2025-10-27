@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQUITAS DRC - Cabinet d'Avocat Kolwezi Lualaba RDC</title>
+    <!-- Chargement de Tailwind CSS via CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chargement de Font Awesome pour les icônes de réseaux sociaux et d'attachement --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPH5vMh/M2r+T0Cg/m5+x1+D5e5+L1r+P5/w5Q5z5O5z5A5z5O5z5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Configuration pour utiliser les polices --><style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Times+New_Roman:wght@700&display=swap'); /* Inclure Times New Roman */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1e293b; /* Gris foncé/Bleu nuit pour le texte */
+        }
+        .header-bg {
+            background-color: #0f172a; /* Bleu nuit profond */
+        }
+        /* Nouvelle couleur d'accent : Bleu clair moderne */
+        .accent-color {
+            color: #3b82f6; /* Bleu clair moderne */
+        }
+        .accent-bg {
+            background-color: #3b82f6; /* Bleu clair moderne pour les boutons */
+        }
+        /* Nouvelle couleur d'accompagnement (gris clair) */
+        .secondary-light-bg {
+            background-color: #e2e8f0; /* Gris clair moderne */
+        }
+        .border-accent {
+            border-color: #3b82f6; /* Bordure bleu clair */
+        }
+        /* Style spécifique pour EQUITAS DRC en Times New Roman Gras Bleu Clair */
+        .equitas-drc-font {
+            font-family: 'Times New Roman', serif;
+            font-weight: 700; /* Gras */
+            color: #3b82f6; /* Bleu clair moderne */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- En-tête (Header) --><header class="header-bg shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo et Nom du Cabinet AVEC EMPLACEMENT POUR LE LOGO --><div class="flex-shrink-0 flex items-center">
+                    <!-- LOGO INTEGRÉ : Remplacez 'logo_equitas_drc.png' par le chemin de votre fichier logo --><div class="w-16 h-16 mr-3 flex items-center justify-center border-2 border-accent shadow-md bg-white p-1 rounded-sm">
+                        <!-- Utilisation de onerror pour un placeholder si l'image n'est pas trouvée --><img src="logo2.jpg" alt="Logo Equitas DRC" class="object-contain w-full h-full" onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/1e293b?text=EQ';" title="Logo Equitas DRC">
+                    </div>
+                    <div>
+                        <a href="#" class="text-3xl equitas-drc-font">EQUITAS DRC</a>
+                        <p class="text-xs text-gray-400 mt-[-5px]">Cabinet d'Avocat / Lawyer Firm | KOLWEZI</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Desktop --><nav class="hidden md:flex space-x-8">
+                    <a href="#accueil" class="text-gray-300 hover:text-white font-medium transition duration-150">Accueil</a>
+                    <a href="#expertise" class="text-gray-300 hover:text-white font-medium transition duration-150">Expertise</a>
+                    <a href="#equipe" class="text-gray-300 hover:text-white font-medium transition duration-150">Équipe</a>
+                    <a href="#contact" class="accent-bg text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-150 shadow-md">Contacter</a>
+                </nav>
+
+                <!-- Bouton Menu Mobile --><div class="md:hidden">
+                    <button id="menu-button" class="text-white focus:outline-none p-2 rounded-md hover:bg-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile --><div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800">
+            <a href="#accueil" class="block text-white hover:bg-slate-700 p-2 rounded-md font-medium">Accueil</a>
+            <a href="#expertise" class="block text-white hover:bg-slate-700 p-2 rounded-md font-medium">Expertise</a>
+            <a href="#equipe" class="block text-white hover:bg-slate-700 p-2 rounded-md font-medium">Équipe</a>
+            <a href="#contact" class="block accent-bg text-white p-2 rounded-md font-medium text-center mt-2">Contacter Maintenant</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Accueil (Hero) --><section id="accueil" class="bg-slate-100 py-16 sm:py-24 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <!-- Slogan --><h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Votre partenaire juridique d'excellence au cœur de la ceinture de cuivre.
+                    </h1>
+                    <!-- Paragraphe de Présentation --><p class="mt-6 text-xl text-slate-600">
+                        À Kolwezi (Province du Lualaba), *EQUITAS DRC* est votre partenaire de confiance. Nous sommes spécialisés en *Arbitrage, Droit Minier & Foncier*, et traitons également le Droit de l'Environnement, du Sport, du Numérique, et la protection de la famille, des femmes et des enfants.
+                    </p>
+                    <!-- CTA Principal --><div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#expertise" class="accent-bg text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-[1.02]">
+                            Découvrir nos Domaines d'Expertise
+                        </a>
+                        <a href="#contact" class="bg-white text-slate-900 border border-slate-300 font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-slate-50 transition duration-300 transform hover:scale-[1.02]">
+                            Prendre Rendez-vous
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Domaines d'Expertise --><section id="expertise" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base accent-color font-semibold tracking-wide uppercase">NOS SPÉCIALISATIONS</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900">Une expertise complète pour vos défis complexes.</p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <!-- Expertise 1: Arbitrage & OHADA --><div class="p-6 secondary-light-bg rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent">
+                        <div class="flex items-center space-x-4">
+                            <!-- Icône pour l'Arbitrage --><span class="text-5xl accent-color" role="img" aria-label="Portefeuille et documents">💼</span>
+                            <h3 class="text-xl font-bold text-slate-900">Arbitrage et Droit des Affaires OHADA</h3>
+                        </div>
+                        <p class="mt-4 text-slate-600">
+                            Maîtrise des procédures d'arbitrage national et international. Constitution de sociétés, résolution des litiges commerciaux et application de l'Acte Uniforme OHADA.
+                        </p>
+                    </div>
+
+                    <!-- Expertise 2: Droit Minier et Foncier RDC --><div class="p-6 secondary-light-bg rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent">
+                        <div class="flex items-center space-x-4">
+                            <!-- Icône pour le Droit Minier --><span class="text-5xl accent-color" role="img" aria-label="Mine ou Gisement">⛏️</span>
+                            <h3 class="text-xl font-bold text-slate-900">Droit Minier et Foncier (Lualaba)</h3>
+                        </div>
+                        <p class="mt-4 text-slate-600">
+                            Assistance pour l'obtention de titres miniers, conformité réglementaire, sécurisation des propriétés foncières et résolution des conflits de terrains à Kolwezi.
+                        </p>
+                    </div>
+
+                    <!-- Expertise 3: Droit Social et Numérique --><div class="p-6 secondary-light-bg rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent">
+                        <div class="flex items-center space-x-4">
+                            <!-- Icône pour la Famille/Numérique --><span class="text-5xl accent-color" role="img" aria-label="Famille et Justice">⚖️</span>
+                            <h3 class="text-xl font-bold text-slate-900">Protection, Numérique et Sport</h3>
+                        </div>
+                        <p class="mt-4 text-slate-600">
+                            Défense des droits de la famille, protection de la femme et de l'enfant. Conseil en Droit du Sport, de l'Environnement et de la propriété intellectuelle numérique.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="#contact" class="inline-flex items-center accent-bg text-white font-semibold py-3 px-6 rounded-xl hover:bg-blue-600 transition duration-300 shadow-lg">
+                        <span role="img" aria-label="Téléphone" class="mr-2">📞</span>
+                        Démarrer une consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Équipe (Team Snapshot) --><section id="equipe" class="py-16 sm:py-24 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base accent-color font-semibold tracking-wide uppercase">NOS AVOCATS</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-slate-900">L'intégrité et la proactivité à votre service.</p>
+                </div>
+
+                <!-- Assure que toutes les cartes ont la même hauteur (items-stretch) --><div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3 items-stretch">
+                    <!-- Avocat 1: Maitre Felix MUTACH UMEN (Taille 140x140) --><div class="text-center p-6 bg-white rounded-xl shadow-lg flex flex-col justify-between">
+                        <!-- TAILLE AJUSTÉE À 140px (l'équivalent de w-35/h-35) --><div class="mx-auto w-35 h-35 bg-gray-200 overflow-hidden flex items-center justify-center text-gray-500 text-3xl font-bold border-4 border-accent">
+                            <!-- REMPLACEZ CE CODE PAR LA BALISE <img> POINTANT VERS VOTRE FICHIER IMAGE --><img src="felix_mutach.jpg" alt="Photo de Maître Felix MUTACH UMEN" class="object-cover w-full h-full">
+                        </div>
+                        <div class="mt-4 flex-grow"> <!-- flex-grow pour que le contenu prenne l'espace disponible --><h4 class="text-xl font-bold text-slate-900">Maitre Felix MUTACH UMEN</h4>
+                            <p class="accent-color font-medium">Associé Principal & Arbitrage</p>
+                            <p class="mt-2 text-sm text-slate-600">Spécialiste en Arbitrage et Droit des Sociétés (OHADA).</p>
+                        </div>
+                    </div>
+
+                    <!-- Avocat 2: Me. Hélène KASONGO (Taille 140x140) --><div class="text-center p-6 bg-white rounded-xl shadow-lg flex flex-col justify-between">
+                        <!-- TAILLE AJUSTÉE À 140px --><div class="mx-auto w-[140px] h-[140px] bg-gray-200 overflow-hidden flex items-center justify-center text-gray-500 text-3xl font-bold border-4 border-accent rounded-full">
+                            <img src="helene_kasongo.jpg" alt="Photo de Me. Hélène KASONGO" class="object-cover w-full h-full">
+                        </div>
+                        <div class="mt-4 flex-grow">
+                            <h4 class="text-xl font-bold text-slate-900">Me. Hélène KASONGO</h4>
+                            <p class="accent-color font-medium">Avocate Senior</p>
+                            <p class="mt-2 text-sm text-slate-600">Experte en Droit Minier et Foncier en Province du Lualaba.</p>
+                        </div>
+                    </div>
+
+                    <!-- Avocat 3: Me. David KABAMBA (Taille 140x140) --><div class="text-center p-6 bg-white rounded-xl shadow-lg flex flex-col justify-between">
+                        <!-- TAILLE AJUSTÉE À 140px --><div class="mx-auto w-[140px] h-[140px] bg-gray-200 overflow-hidden flex items-center justify-center text-gray-500 text-3xl font-bold border-4 border-accent rounded-full">
+                            <img src="david_kabamba.jpg" alt="Photo de Me. David KABAMBA" class="object-cover w-full h-full">
+                        </div>
+                        <div class="mt-4 flex-grow">
+                            <h4 class="text-xl font-bold text-slate-900">Me. David KABAMBA</h4>
+                            <p class="accent-color font-medium">Droit Social & Numérique</p>
+                            <p class="mt-2 text-sm text-slate-600">Conseil en Droit du Numérique, de l'Environnement et de la Famille.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-center">
+                    <p class="text-lg text-slate-700 italic">"Notre équipe parle couramment l'anglais, le français, l'espagnol, le chinois, l'hindi, le tshiluba, le swahili et le lingala, ce qui assure une communication fluide et efficace dans la région."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Contact et Localisation --><section id="contact" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Formulaire de Contact --><div class="p-8 secondary-light-bg rounded-xl shadow-2xl">
+                        <h2 class="text-3xl font-extrabold text-slate-900">Contactez-nous à Kolwezi</h2>
+                        <p class="mt-2 text-slate-600 mb-6">Décrivez brièvement votre besoin. Nous vous répondrons sous 24 heures.</p>
+                        
+                        <form id="contact-form" action="#">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-slate-700">Nom et Prénom</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent p-3 border">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent p-3 border">
+                            </div>
+                            <div class="mb-4">
+                                <label for="telephone" class="block text-sm font-medium text-slate-700">Téléphone (Ex: +243 81 000 000) - Optionnel</label>
+                                <input type="tel" id="telephone" name="telephone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent p-3 border">
+                            </div>
+                            
+                            <!-- NOUVEAU: Message avec Bouton d'Attachement -->
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-slate-700">Votre Message</label>
+                                <div class="relative mt-1">
+                                    <textarea id="message" name="message" rows="4" required class="block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent p-3 border pr-12"></textarea>
+                                    
+                                    <!-- Input de Fichier caché (Multiple pour autoriser plusieurs documents) -->
+                                    <input type="file" id="attachment" name="attachment" class="hidden" multiple>
+                                    
+                                    <!-- Bouton visible pour déclencher le clic sur l'input de fichier -->
+                                    <button type="button" onclick="document.getElementById('attachment').click()" 
+                                            class="absolute right-3 top-3 p-2 text-white accent-bg rounded-full shadow-md hover:bg-blue-600 transition duration-150 transform hover:scale-105" 
+                                            title="Attacher un fichier">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <p id="file-status" class="text-xs text-slate-500 mt-1 h-4"></p>
+                            </div>
+
+                            <!-- Bouton WhatsApp -->
+                            <button type="submit" class="w-full accent-bg text-white font-semibold py-3 rounded-xl shadow-md hover:bg-blue-600 transition duration-300">
+                                <i class="fab fa-whatsapp mr-2"></i> Envoyer la Demande (via WhatsApp)
+                            </button>
+                            <p class="text-xs text-center text-slate-500 mt-2">Vos informations ouvriront une conversation sécurisée sur WhatsApp.</p>
+                            
+                            <!-- NOUVEAU: Bouton Email Direct -->
+                            <button type="button" id="email-submit" data-email="felixmutachumen@gmail.com" class="w-full bg-gray-500 text-white font-semibold py-3 rounded-xl shadow-md hover:bg-gray-600 transition duration-300 mt-4">
+                                <i class="fas fa-envelope mr-2"></i> Envoyer la Demande (par Email Direct)
+                            </button>
+                            <p class="text-xs text-center text-slate-500 mt-2">Option sans WhatsApp. Note : Les fichiers joints ne seront pas inclus par l'envoi direct par email (mailto).</p>
+                        </form>
+                    </div>
+
+                    <!-- Infos de Localisation --><div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900 accent-color">Où nous trouver</h3>
+                            <p class="mt-4 text-slate-600">
+                                Notre bureau est situé à Kolwezi, au cœur du Quartier Biashara, facilitant l'accès pour nos clients du Lualaba.
+                            </p>
+                            <div class="mt-4 space-y-3">
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-xl accent-color" role="img" aria-label="Adresse">📍</span>
+                                    <div>
+                                        <p class="font-semibold text-slate-900">Adresse Principale</p>
+                                        <p class="text-slate-600">
+                                            39 Avenue Kasa-Vubu, Quartier Biashara, Commune de Dilala,<br>
+                                            Ville de KOLWEZI, Province du LUALABA, RDC<br>
+                                            <span class="font-bold text-sm">(Réf. Cercle GCM MANIKA)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-xl accent-color" role="img" aria-label="Téléphone">☎️</span>
+                                    <div>
+                                        <p class="font-semibold text-slate-900">Contact Téléphonique</p>
+                                        <p class="text-slate-600">
+                                            Ligne Principale : *+243 979 616 566* <br>
+                                            Bureau : *+243 979 616 566*
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-xl accent-color" role="img" aria-label="Email">📧</span>
+                                    <div>
+                                        <p class="font-semibold text-slate-900">Courriel</p>
+                                        <p class="text-slate-600">
+                                            contact@equitas-drc.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carte Cliquable Google Maps --><div id="map-location">
+                            <h3 class="text-2xl font-bold text-slate-900 accent-color">Notre Localisation (Biashara, Kolwezi)</h3>
+                            <!-- L'ancre <a> enveloppe le div pour le rendre cliquable --><a href="https://www.google.com/maps/place/-10.716830,25.463637" target="_blank" rel="noopener noreferrer" class="block mt-4 rounded-xl overflow-hidden shadow-2xl transition duration-300 hover:scale-[1.01] hover:shadow-3xl">
+                                <div class="w-full h-64 bg-gray-300 flex items-center justify-center border-4 border-accent">
+                                    <p class="text-gray-800 font-bold text-lg p-4 bg-white/70 rounded-lg backdrop-blur-sm">
+                                        Cliquez ici pour voir l'itinéraire sur Google Maps
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pied de Page (Footer) --><footer class="header-bg py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <div class="mb-4">
+                <!-- Logo Footer --><p class="text-3xl equitas-drc-font">EQUITAS DRC</p>
+            </div>
+            
+            <!-- NOUVEAU: Réseaux Sociaux --><div class="flex justify-center space-x-6 mt-6 mb-6 text-3xl text-gray-300">
+                <a href="https://wa.me/243979616566" target="_blank" class="hover:text-green-500 transition duration-150 transform hover:scale-110" title="WhatsApp Equitas DRC">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" target="_blank" class="hover:text-blue-600 transition duration-150 transform hover:scale-110" title="Facebook Equitas DRC">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" target="_blank" class="hover:text-white transition duration-150 transform hover:scale-110" title="TikTok Equitas DRC">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" target="_blank" class="hover:text-pink-600 transition duration-150 transform hover:scale-110" title="Instagram Equitas DRC">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <p class="text-sm">&copy; 2025 EQUITAS DRC. Tous droits réservés.</p>
+            <p class="text-xs mt-1">
+                Cabinet d'Avocats au Barreau de Kolwezi/Lualaba. Expertise RDC & OHADA.
+            </p>
+            
+            <!-- Mentions Légales Obligatoires --><div class="mt-4 space-x-4 text-xs">
+                <a href="#" class="hover:text-white transition duration-150">Mentions Légales</a>
+                <span class="text-gray-500">|</span>
+                <a href="#" class="hover:text-white transition duration-150">Politique de Confidentialité</a>
+                <span class="text-gray-500">|</span>
+                <a href="#" class="hover:text-white transition duration-150">Plan du Site</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript pour le Menu Mobile et le Formulaire --><script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const attachmentInput = document.getElementById('attachment');
+            const fileStatus = document.getElementById('file-status');
+            const emailSubmitButton = document.getElementById('email-submit');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Fermer le menu après un clic sur un lien (pour la navigation sur la même page)
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // GESTION DU CHAMP D'ATTACHE DE FICHIER
+            attachmentInput.addEventListener('change', () => {
+                if (attachmentInput.files.length > 0) {
+                    const fileNames = Array.from(attachmentInput.files).map(f => f.name).join(', ');
+                    fileStatus.textContent = `${attachmentInput.files.length} fichier(s) attaché(s): ${fileNames}`;
+                    fileStatus.classList.remove('text-slate-500');
+                    fileStatus.classList.add('text-green-600');
+                } else {
+                    fileStatus.textContent = '';
+                    fileStatus.classList.remove('text-green-600');
+                    fileStatus.classList.add('text-slate-500');
+                }
+            });
+
+            // LOGIQUE DE REDIRECTION WHATSAPP
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); 
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('telephone').value; 
+                    const message = document.getElementById('message').value;
+
+                    // Les fichiers NE PEUVENT PAS être attachés via l'API WhatsApp
+                    
+                    const phoneNumber = '243979616566'; 
+                    
+                    const whatsappMessage = 
+                        `Bonjour EQUITAS DRC,\n\n` +
+                        `Je m'appelle ${name} et je vous contacte depuis votre site web (EQUITAS DRC - Kolwezi) pour une consultation.\n\n` +
+                        `Voici les détails de ma demande :\n` +
+                        `-----------------------------------------\n` +
+                        `Email : ${email}\n` +
+                        `Téléphone : ${phone || 'Non fourni'}\n` +
+                        `Mon besoin :\n${message}\n` +
+                        `-----------------------------------------\n` +
+                        (attachmentInput.files.length > 0 ? `NOTE: Un fichier a été joint dans le formulaire, veuillez contacter le client par un autre moyen si vous en avez besoin.\n` : '') +
+                        `Je vous remercie de votre retour.`;
+
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+                    window.location.href = whatsappUrl;
+                });
+            }
+            
+            // LOGIQUE D'ENVOI PAR EMAIL DIRECT
+            if (emailSubmitButton) {
+                emailSubmitButton.addEventListener('click', function() {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    const targetEmail = this.getAttribute('data-email');
+                    
+                    if (!name || !email || !message) {
+                        // Utilisation d'une méthode simple pour afficher un message d'erreur
+                        alert('Veuillez remplir votre Nom, Email et Message pour l\'envoi par email.');
+                        return;
+                    }
+                    
+                    const subject = encodeURIComponent(`Demande de Consultation de ${name} (via Site Web)`);
+                    const body = encodeURIComponent(
+                        `Bonjour Maître Mutach Umen,\n\n` +
+                        `Je vous contacte suite à une demande de consultation.\n\n` +
+                        `Nom et Prénom: ${name}\n` +
+                        `Email de contact: ${email}\n\n` +
+                        `Message:\n${message}\n\n` +
+                        `Cordialement.`
+                    );
+
+                    // Ouverture du client de messagerie
+                    window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
