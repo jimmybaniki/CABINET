@@ -35,6 +35,34 @@
             font-weight: 700; /* Gras */
             color: #3b82f6; /* Bleu clair moderne */
         }
+        
+        /* STYLE DU BOUTON FLOTTANT BANIKILABS */
+        .banikilabs-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Assurez-vous qu'il est au-dessus du reste */
+            background-color: rgba(255, 255, 255, 0.85); /* Blanc semi-transparent */
+            border: 1px solid rgba(59, 130, 246, 0.3); /* Bordure accent plus transparente */
+            padding: 5px 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        .banikilabs-fixed:hover {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .banikilabs-fixed img {
+            max-height: 20px; /* Taille réduite pour un petit logo */
+            opacity: 0.6; /* Rendre le logo légèrement transparent */
+        }
+        .banikilabs-fixed span {
+            font-size: 0.75rem;
+            color: #64748b; /* Gris subtil */
+            opacity: 0.8;
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -338,16 +366,38 @@
                                     <span class="text-xl accent-color" role="img" aria-label="Email">📧</span>
                                     <div>
                                         <p class="font-semibold text-slate-900">Courriel</p>
-                                        <p class="text-slate-600">
+                                        <a href="mailto:felixmutachumen@gmail.com" class="text-slate-600 hover:text-blue-700 underline transition duration-150">
                                             contact@equitas-drc.com
-                                        </p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="text-xl font-bold text-slate-900 accent-color mb-3">Suivez-nous</h4>
+                                <div class="flex space-x-6 text-2xl">
+                                    <a href="https://wa.me/243979616566" target="_blank" class="text-slate-700 hover:text-green-500 transition duration-200 transform hover:scale-110" title="WhatsApp Equitas DRC">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/profile.php?id=61583413300805" target="_blank" class="text-slate-700 hover:text-blue-600 transition duration-200 transform hover:scale-110" title="Facebook Equitas DRC">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/equitasrdc?igsh=MWZmeG1oN3ZwM2RzYw%3D%3D&utm_source=qr" target="_blank" class="text-slate-700 hover:text-pink-600 transition duration-200 transform hover:scale-110" title="Instagram Equitas DRC">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.tiktok.com/@equitasdrc" target="_blank" class="text-slate-700 hover:text-gray-900 transition duration-200 transform hover:scale-110" title="TikTok Equitas DRC">
+                                        <i class="fab fa-tiktok"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/equitasdrc/" target="_blank" class="text-slate-700 hover:text-blue-400 transition duration-200 transform hover:scale-110" title="LinkedIn Equitas DRC">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
                         </div>
 
                         <div id="map-location">
-                            <h3 class="text-2xl font-bold text-slate-900 accent-color">Notre Localisation (Biashara, Kolwezi)</h3>
+                            <h3 class="text-2xl font-bold text-slate-900 accent-color mt-8">Notre Localisation (Biashara, Kolwezi)</h3>
                             <a href="https://www.google.com/maps/place/-10.716830,25.463637" target="_blank" rel="noopener noreferrer" class="block mt-4 rounded-xl overflow-hidden shadow-2xl transition duration-300 hover:scale-[1.01] hover:shadow-3xl">
                                 <div class="w-full h-64 bg-gray-300 flex items-center justify-center border-4 border-accent">
                                     <p class="text-gray-800 font-bold text-lg p-4 bg-white/70 rounded-lg backdrop-blur-sm">
@@ -365,25 +415,10 @@
 
     <footer class="header-bg py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-            <div class="mb-4">
-                <p class="text-3xl equitas-drc-font">EQUITAS DRC</p>
+            <div class="mb-6">
+                <p class="text-3xl equitas-drc-font text-white">EQUITAS DRC</p>
             </div>
             
-            <div class="flex justify-center space-x-6 mt-6 mb-6 text-3xl text-gray-300">
-                <a href="https://wa.me/243979616566" target="_blank" class="hover:text-green-500 transition duration-150 transform hover:scale-110" title="WhatsApp Equitas DRC">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="#" target="_blank" class="hover:text-blue-600 transition duration-150 transform hover:scale-110" title="Facebook Equitas DRC">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" target="_blank" class="hover:text-white transition duration-150 transform hover:scale-110" title="TikTok Equitas DRC">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="#" target="_blank" class="hover:text-pink-600 transition duration-150 transform hover:scale-110" title="Instagram Equitas DRC">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-
             <p class="text-sm">© 2025 EQUITAS DRC. Tous droits réservés.</p>
             <p class="text-xs mt-1">
                 Cabinet d'Avocats au Barreau de Kolwezi/Lualaba. Expertise RDC & OHADA.
@@ -398,6 +433,11 @@
             </div>
         </div>
     </footer>
+    
+    <a href="https://banikilabs.page.gd" target="_blank" rel="noopener noreferrer" class="banikilabs-fixed flex items-center">
+        <i class="fas fa-code text-accent-color text-xl opacity-60"></i> 
+        <span>Powered by Banikilabs</span>
+    </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
