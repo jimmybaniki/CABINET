@@ -32,6 +32,34 @@
             font-weight: 700;
             color: #3b82f6;
         }
+        
+        /* STYLE DU BOUTON FLOTTANT BANIKILABS */
+        .banikilabs-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 5px 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        .banikilabs-fixed:hover {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .banikilabs-fixed img {
+            max-height: 20px;
+            opacity: 0.6;
+        }
+        .banikilabs-fixed span {
+            font-size: 0.75rem;
+            color: #64748b;
+            opacity: 0.8;
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -166,28 +194,13 @@
             </div>
         </div>
     </main>
-
+    
     <footer class="header-bg py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-            <div class="mb-4">
-                <p class="text-3xl equitas-drc-font">EQUITAS DRC</p>
+            <div class="mb-6">
+                <p class="text-3xl equitas-drc-font text-white">EQUITAS DRC</p>
             </div>
             
-            <div class="flex justify-center space-x-6 mt-6 mb-6 text-3xl text-gray-300">
-                <a href="https://wa.me/243979616566" target="_blank" class="hover:text-green-500 transition duration-150 transform hover:scale-110" title="WhatsApp Equitas DRC">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="#" target="_blank" class="hover:text-blue-600 transition duration-150 transform hover:scale-110" title="Facebook Equitas DRC">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" target="_blank" class="hover:text-white transition duration-150 transform hover:scale-110" title="TikTok Equitas DRC">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="#" target="_blank" class="hover:text-pink-600 transition duration-150 transform hover:scale-110" title="Instagram Equitas DRC">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-
             <p class="text-sm">© 2025 EQUITAS DRC. Tous droits réservés.</p>
             <p class="text-xs mt-1">
                 Cabinet d'Avocats au Barreau de Kolwezi/Lualaba. Expertise RDC & OHADA.
@@ -202,6 +215,11 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://banikilabs.page.gd" target="_blank" rel="noopener noreferrer" class="banikilabs-fixed flex items-center">
+        <i class="fas fa-code text-accent-color text-xl opacity-60"></i> 
+        <span>Powered by Banikilabs</span>
+    </a>
 
     <script>
         // Script pour le menu mobile
