@@ -3,113 +3,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abonnement Equitas Expiré - Réabonnement</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>EQUITAS DRC - Cabinet d'Avocat Kolwezi, Lubumbashi & Kinshasa</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Times+New_Roman:wght@700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f7f7f9;
+            color: #1e293b;
         }
-        .container-card {
-            max-width: 800px;
+        .header-bg {
+            background-color: #0f172a;
         }
-        /* Changement de couleur pour correspondre à WhatsApp ou au succès */
-        .button-primary-success {
-            background-color: #25d366; /* WhatsApp Green */
-            color: white;
-            padding: 12px 24px;
-            border-radius: 0.5rem;
+        .accent-color {
+            color: #3b82f6;
+        }
+        .accent-bg {
+            background-color: #3b82f6;
+        }
+        .secondary-light-bg {
+            background-color: #e2e8f0;
+        }
+        .border-accent {
+            border-color: #3b82f6;
+        }
+        .equitas-drc-font {
+            font-family: 'Times New Roman', serif;
             font-weight: 700;
-            transition: background-color 0.2s;
+            color: #3b82f6;
         }
-        .button-primary-success:hover {
-            background-color: #128c7e; /* Darker WhatsApp Green */
-        }
-        .attention {
-            border-left: 4px solid #f97316; /* orange-500 */
-            background-color: #fff7ed; /* orange-50 */
-            padding: 1rem;
-            border-radius: 0.5rem;
-        }
-        .reabonnement-focus {
-            border: 2px solid #2563eb; /* blue-600 */
-            background-color: #eff6ff; /* blue-50 */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        .photo-frame {
+            background-color: #f1f5f9;
+            border: 2px solid #3b82f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
     </style>
 </head>
-<body class="p-4 sm:p-8 flex justify-center min-h-screen">
+<body class="bg-gray-50">
 
-    <div class="container-card w-full bg-white shadow-xl rounded-xl p-6 md:p-10 my-8">
-        
-        <header class="pb-6 border-b border-gray-200 mb-6">
-            <h1 class="text-3xl font-bold text-gray-900 mb-2">🎉 Votre Abonnement Equitas a pris fin.</h1>
-            <p class="text-lg text-gray-600">Nous vous remercions pour votre confiance. Si vous souhaitez remettre votre page <strong>equitas.com</strong> en ligne, c'est très simple !</p>
-        </header>
+    <header class="header-bg shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="w-16 h-16 mr-3 flex items-center justify-center border-2 border-accent shadow-md bg-white p-1 rounded-sm">
+                        <img src="logo.jpg" alt="Logo Equitas DRC" class="object-contain w-full h-full" onerror="this.onerror=null; this.src='https://placehold.co/64x64/ffffff/1e293b?text=EQ';">
+                    </div>
+                    <div>
+                        <a href="#" class="text-3xl equitas-drc-font">EQUITAS DRC</a>
+                        <p class="text-xs text-gray-400 mt-[-5px]">Cabinet d'Avocat / Lawyer Firm</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#accueil" class="text-gray-300 hover:text-white font-medium transition duration-150">Accueil</a>
+                    <a href="#expertise" class="text-gray-300 hover:text-white font-medium transition duration-150">Expertise</a>
+                    <a href="#equipe" class="text-gray-300 hover:text-white font-medium transition duration-150">Équipe</a>
+                    <a href="#contact" class="accent-bg text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-150 shadow-md">Contacter</a>
+                </nav>
 
-        <!-- SECTION PRINCIPALE : RÉABONNEMENT WHATSAPP -->
-        <section id="reabonnement-section" class="reabonnement-focus p-6 my-6 rounded-lg text-center">
-            <h2 class="text-2xl font-bold text-blue-800 mb-4">Réactivez votre Service et Remettez votre Site en Ligne</h2>
-            <p class="text-blue-900 mb-6">
-                Pour relancer votre hébergement et restaurer l'accès à votre page, veuillez contacter notre partenaire technique Banikilabs directement sur WhatsApp :
-            </p>
-            
-            <a href="https://wa.me/243978415814" class="button-primary-success inline-block shadow-lg hover:shadow-xl transition duration-300">
-                💬 Réabonnez-vous via WhatsApp
-            </a>
+                <div class="md:hidden">
+                    <button id="menu-button" class="text-white focus:outline-none p-2 rounded-md hover:bg-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-3 space-y-1 bg-slate-800">
+            <a href="#accueil" class="block text-white hover:bg-slate-700 p-2 rounded-md">Accueil</a>
+            <a href="#expertise" class="block text-white hover:bg-slate-700 p-2 rounded-md">Expertise</a>
+            <a href="#equipe" class="block text-white hover:bg-slate-700 p-2 rounded-md">Équipe</a>
+            <a href="#contact" class="block accent-bg text-white p-2 rounded-md text-center">Contacter</a>
+        </div>
+    </header>
 
-            <div class="mt-6 text-left border-t border-blue-200 pt-4">
-                <h3 class="text-xl font-semibold text-blue-700 mb-2">Conservation des Données</h3>
-                <ul class="list-disc list-inside space-y-2 text-blue-700">
-                    <li>Vos données d'hébergement (fichiers, bases de données) sont conservées « au frais » pendant une période de <strong class="font-semibold">30 jours</strong> suivant la fin de votre cycle de facturation.</li>
-                    <li>Un réabonnement dans ce délai garantit une remise en ligne <strong class="font-semibold">immédiate</strong> de votre site, sans perte de données.</li>
-                    <li>Passé ce délai de 30 jours, nous ne pouvons plus garantir la récupération de vos données.</li>
-                </ul>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="accueil" class="bg-slate-100 py-16 sm:py-24 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Votre partenaire juridique d'excellence en RDC.
+                    </h1>
+                    <p class="mt-6 text-lg sm:text-xl text-slate-600">
+                        Présent à <span class="font-bold text-slate-800">Kolwezi</span> (Province du Lualaba), à <span class="font-bold text-slate-800">Lubumbashi</span> (Province du Haut-Katanga) et à <span class="font-bold text-slate-800">Kinshasa</span> (Province de Kinshasa), <strong>EQUITAS DRC</strong> est votre partenaire de confiance. 
+                    </p>
+                    <p class="mt-4 text-slate-600">
+                        Spécialisés en Arbitrage, Droit Minier & Foncier, nous traitons également le Droit de l'Environnement, du Sport, du Numérique, et la protection de la famille.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#expertise" class="accent-bg text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-blue-600 transition">
+                            Domaines d'Expertise
+                        </a>
+                        <a href="#contact" class="bg-white text-slate-900 border border-slate-300 font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-slate-50 transition">
+                            Prendre Rendez-vous
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- FIN DE LA SECTION PRINCIPALE -->
 
-        <!-- Section 1: Conséquences (pour insister sur l'urgence du réabonnement) -->
-        <section id="consequences" class="mt-8">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Que se passe-t-il si je ne me réabonne pas ?</h2>
-            
-            <blockquote class="attention text-base text-orange-800 mb-6">
-                ⚠️ <strong class="font-bold">Important :</strong> Votre site est actuellement hors ligne. Si vous ne réactivez pas le service, l'accès à toutes vos données (fichiers, emails, bases de données) sera définitivement perdu après le délai de 30 jours.
-            </blockquote>
-
-            <p class="mb-4 text-gray-700 font-semibold">Les services impactés sont :</p>
-            <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mb-6">
-                <li>Le site web visible à l'adresse **equitas.com** (actuellement inaccessible).</li>
-                <li>Vos bases de données associées.</li>
-                <li>Vos adresses e-mail professionnelles liées à votre nom de domaine.</li>
-            </ul>
+        <!-- EXPERTISE SECTION (Inchangée) -->
+        <section id="expertise" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base accent-color font-semibold tracking-wide uppercase">NOS SPÉCIALISATIONS</h2>
+                    <p class="mt-2 text-3xl font-extrabold text-slate-900">Une expertise complète.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <div class="p-6 secondary-light-bg rounded-xl border-t-4 border-accent">
+                        <h3 class="text-xl font-bold text-slate-900">Arbitrage et OHADA</h3>
+                        <p class="mt-4 text-slate-600">Maîtrise des procédures d'arbitrage et droit des affaires OHADA.</p>
+                    </div>
+                    <div class="p-6 secondary-light-bg rounded-xl border-t-4 border-accent">
+                        <h3 class="text-xl font-bold text-slate-900">Droit Minier et Foncier</h3>
+                        <p class="mt-4 text-slate-600">Sécurisation des titres miniers et fonciers dans les zones stratégiques.</p>
+                    </div>
+                    <div class="p-6 secondary-light-bg rounded-xl border-t-4 border-accent">
+                        <h3 class="text-xl font-bold text-slate-900">Protection et Numérique</h3>
+                        <p class="mt-4 text-slate-600">Droit du Sport, du Numérique et protection de la Famille.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Section 2: Étapes détaillées pour le réabonnement -->
-        <section id="etapes-reabonnement" class="mt-10">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Étapes Détaillées pour la Réactivation</h2>
-            <ol class="space-y-4">
-                <li class="p-3 bg-white border border-gray-200 rounded-md shadow-sm">
-                    <strong class="text-lg text-blue-600">1. Envoyez un message :</strong> Cliquez sur le bouton "Réabonnez-vous via WhatsApp" pour démarrer la conversation avec Banikilabs.
-                </li>
-                <li class="p-3 bg-white border border-gray-200 rounded-md shadow-sm">
-                    <strong class="text-lg text-blue-600">2. Identifiez-vous :</strong> Mentionnez vos identifiants Equitas (ID Client) dans le chat pour que l'équipe Banikilabs puisse restaurer votre compte.
-                </li>
-                <li class="p-3 bg-white border border-gray-200 rounded-md shadow-sm">
-                    <strong class="text-lg text-blue-600">3. Confirmation du Plan :</strong> L'équipe vous confirmera le plan d'hébergement et le montant.
-                </li>
-                <li class="p-3 bg-white border border-gray-200 rounded-md shadow-sm">
-                    <strong class="text-lg text-blue-600">4. Paiement et Activation :</strong> Finalisez le paiement via les instructions fournies. Votre site sera restauré et accessible en ligne après confirmation.
-                </li>
-            </ol>
+        <!-- EQUIPE SECTION -->
+        <section id="equipe" class="py-16 sm:py-24 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Fondateur -->
+                <div class="text-center mb-16">
+                    <h2 class="text-base accent-color font-semibold tracking-wide uppercase">DIRECTION</h2>
+                    <div class="mt-8 flex justify-center">
+                        <div class="text-center p-6 bg-white rounded-xl shadow-xl border-2 border-accent max-w-sm">
+                            <div class="mx-auto w-[220px] h-[260px] photo-frame rounded-lg">
+                                <img src="felix_mutach.jpg" alt="Maître Felix MUTACH UMEN" class="object-cover w-full h-full" onerror="this.src='https://placehold.co/220x260?text=Maître+Felix'">
+                            </div>
+                            <h4 class="mt-4 text-2xl font-bold text-slate-900">Maître Felix MUTACH UMEN</h4>
+                            <p class="accent-color font-bold">Fondateur & Associé Principal</p>
+                            <p class="text-sm font-semibold text-slate-500 mt-1">ONA : 221224</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Groupe Kolwezi -->
+                <div class="mb-20">
+                    <div class="border-b-2 border-slate-300 pb-2 mb-8">
+                        <h3 class="text-2xl font-bold text-slate-800 uppercase tracking-wider">KOLWEZI <span class="text-sm font-normal normal-case opacity-70">(Province du Lualaba)</span></h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Avocat 1 -->
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
+                            <div class="mx-auto w-40 h-40 photo-frame rounded-full">
+                                <img src="nyota_abigael.jpg" alt="Maître NYOTA NGOIE ABIGAEL" class="object-cover w-full h-full" onerror="this.src='https://placehold.co/160x160?text=Photo'">
+                            </div>
+                            <h4 class="mt-4 text-lg font-bold text-slate-900">Maître NYOTA NGOIE ABIGAEL</h4>
+                            <p class="text-xs text-slate-500">ONA 22150</p>
+                        </div>
+                        <!-- Avocat 2 -->
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
+                            <div class="mx-auto w-40 h-40 photo-frame rounded-full">
+                                <img src="ilunga_hugo.jpg" alt="Maître ILUNGA MULUME Hugo" class="object-cover w-full h-full" onerror="this.src='https://placehold.co/160x160?text=Photo'">
+                            </div>
+                            <h4 class="mt-4 text-lg font-bold text-slate-900">Maître ILUNGA MULUME Hugo</h4>
+                            <p class="text-xs text-slate-500">ONA 18232</p>
+                        </div>
+                        <!-- Avocat 3 -->
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
+                            <div class="mx-auto w-40 h-40 photo-frame rounded-full">
+                                <img src="lumbwe_ginette.jpg" alt="Maître Lumbwe Zabibu Kabinga Ginette" class="object-cover w-full h-full" onerror="this.src='https://placehold.co/160x160?text=Photo'">
+                            </div>
+                            <h4 class="mt-4 text-lg font-bold text-slate-900">Maître Lumbwe Zabibu Kabinga Ginette</h4>
+                            <p class="text-xs text-slate-500">ONA 6057</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Groupe Lubumbashi -->
+                <div class="mb-20">
+                    <div class="border-b-2 border-slate-300 pb-2 mb-8">
+                        <h3 class="text-2xl font-bold text-slate-800 uppercase tracking-wider">LUBUMBASHI <span class="text-sm font-normal normal-case opacity-70">(Province du Haut-Katanga)</span></h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
+                            <div class="mx-auto w-32 h-40 photo-frame rounded-md">
+                                <i class="fas fa-user-tie text-4xl text-slate-300"></i>
+                            </div>
+                            <h4 class="mt-4 text-md font-bold text-slate-900">Maître SHABANI Mariam</h4>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
+                            <div class="mx-auto w-32 h-40 photo-frame rounded-md">
+                                <i class="fas fa-user-tie text-4xl text-slate-300"></i>
+                            </div>
+                            <h4 class="mt-4 text-md font-bold text-slate-900">Maître BUSHIRI ZAUMA Aimee</h4>
+                            <p class="text-xs text-slate-500">ONA : 18224</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
+                            <div class="mx-auto w-32 h-40 photo-frame rounded-md">
+                                <i class="fas fa-user-tie text-4xl text-slate-300"></i>
+                            </div>
+                            <h4 class="mt-4 text-md font-bold text-slate-900">Maître MBALA BADIBANGA Gilbert</h4>
+                            <p class="text-xs text-slate-500">ONA : 18304</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
+                            <div class="mx-auto w-32 h-40 photo-frame rounded-md">
+                                <i class="fas fa-user-tie text-4xl text-slate-300"></i>
+                            </div>
+                            <h4 class="mt-4 text-md font-bold text-slate-900">Maître KAZADI MBUMBA Parfait</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Groupe Kinshasa -->
+                <div class="mb-20">
+                    <div class="border-b-2 border-slate-300 pb-2 mb-8">
+                        <h3 class="text-2xl font-bold text-slate-800 uppercase tracking-wider">KINSHASA <span class="text-sm font-normal normal-case opacity-70">(Province de Kinshasa)</span></h3>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                        <div class="h-48 photo-frame rounded-lg bg-white"><i class="fas fa-user-circle text-3xl text-slate-200"></i></div>
+                        <div class="h-48 photo-frame rounded-lg bg-white"><i class="fas fa-user-circle text-3xl text-slate-200"></i></div>
+                        <div class="h-48 photo-frame rounded-lg bg-white"><i class="fas fa-user-circle text-3xl text-slate-200"></i></div>
+                        <div class="h-48 photo-frame rounded-lg bg-white"><i class="fas fa-user-circle text-3xl text-slate-200"></i></div>
+                        <div class="h-48 photo-frame rounded-lg bg-white"><i class="fas fa-user-circle text-3xl text-slate-200"></i></div>
+                    </div>
+                </div>
+
+                <!-- Parrains -->
+                <div class="mt-16 bg-white p-8 rounded-2xl shadow-inner text-center border-l-4 border-accent">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 underline decoration-accent">Parrains de EQUITAS DRC</h3>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12">
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-400">Parrain Professionnel</p>
+                            <p class="text-lg font-bold text-slate-800">Mr. . . . .</p>
+                        </div>
+                        <div class="hidden md:block w-px h-12 bg-slate-200"></div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-400">Parrain Personnel</p>
+                            <p class="text-lg font-bold text-slate-800">Mr. Diur KABEY</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <p class="text-md text-slate-600 italic">"Notre équipe parle : Anglais, Français, Espagnol, Chinois, Hindi, Tshiluba, Swahili et Lingala."</p>
+                </div>
+            </div>
         </section>
 
-    </div>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Formulaire (Inchangé) -->
+                    <div class="p-8 secondary-light-bg rounded-xl shadow-2xl">
+                        <h2 class="text-3xl font-extrabold text-slate-900">Contactez-nous</h2>
+                        <p class="mt-2 text-slate-600 mb-6">Ouverture d'une consultation sécurisée.</p>
+                        
+                        <form id="contact-form" action="#">
+                            <input type="text" id="name" placeholder="Nom complet" required class="mb-4 block w-full rounded-md border-gray-300 p-3 border">
+                            <input type="email" id="email" placeholder="Email" required class="mb-4 block w-full rounded-md border-gray-300 p-3 border">
+                            <input type="tel" id="telephone" placeholder="Téléphone" class="mb-4 block w-full rounded-md border-gray-300 p-3 border">
+                            <div class="relative mb-4">
+                                <textarea id="message" rows="4" placeholder="Votre message" required class="block w-full rounded-md border-gray-300 p-3 border"></textarea>
+                                <input type="file" id="attachment" class="hidden">
+                                <button type="button" onclick="document.getElementById('attachment').click()" class="absolute right-3 top-3 p-2 accent-bg text-white rounded-full"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <p id="file-status" class="text-xs mb-4 h-4"></p>
+                            <button type="submit" class="w-full accent-bg text-white font-bold py-3 rounded-xl shadow-md hover:bg-blue-600 transition mb-4">
+                                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                            </button>
+                            <button type="button" id="email-submit" data-email="maitrefelixumen@gmail.com" class="w-full bg-slate-500 text-white font-bold py-3 rounded-xl shadow-md hover:bg-slate-600 transition">
+                                <i class="fas fa-envelope mr-2"></i> Email Direct
+                            </button>
+                        </form>
+                    </div>
 
-    <footer class="text-center w-full mt-4 text-gray-500 text-sm">
-        <p>Une question urgente sur vos données ? <a href="/contact" class="text-blue-600 hover:underline">Contactez notre support client Equitas</a>.</p>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900 accent-color">Où nous trouver</h3>
+                            
+                            <!-- KOLWEZI -->
+                            <div class="mt-6 p-4 border-l-4 border-accent bg-slate-50 rounded-r-lg">
+                                <p class="font-bold text-slate-900 uppercase text-sm">Kolwezi (Lualaba)</p>
+                                <p class="text-slate-600 text-sm mt-1">
+                                    39 Avenue Kasa-Vubu, Quartier Biashara, Commune de Dilala.<br>
+                                    <span class="font-bold">(Réf. Cercle GCM MANIKA)</span>
+                                </p>
+                            </div>
+
+                            <!-- LUBUMBASHI -->
+                            <div class="mt-4 p-4 border-l-4 border-slate-400 bg-slate-50 rounded-r-lg">
+                                <p class="font-bold text-slate-900 uppercase text-sm">Lubumbashi (Haut-Katanga)</p>
+                                <p class="text-slate-600 text-sm mt-1">
+                                    146 Avenue Kasaï, Commune de Lubumbashi.
+                                </p>
+                            </div>
+
+                            <div class="mt-8 space-y-3">
+                                <p class="flex items-center text-slate-700 font-bold"><i class="fas fa-phone accent-color mr-3"></i> +243 979 616 566</p>
+                                <p class="flex items-center text-slate-700 font-bold"><i class="fas fa-envelope accent-color mr-3"></i> contact@equitas-drc.com</p>
+                            </div>
+                        </div>
+
+                        <div id="map-location">
+                            <a href="https://www.google.com/maps/place/-10.716830,25.463637" target="_blank" class="block rounded-xl overflow-hidden shadow-xl border-4 border-accent">
+                                <div class="w-full h-48 bg-slate-200 flex items-center justify-center">
+                                    <p class="text-slate-800 font-bold text-center p-4">Cliquez pour voir l'itinéraire<br><span class="text-xs font-normal">Kolwezi - Biashara</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="header-bg py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-400">
+            <p class="text-3xl equitas-drc-font">EQUITAS DRC</p>
+            <div class="flex justify-center space-x-6 mt-6 mb-6 text-2xl text-gray-300">
+                <a href="https://wa.me/243979616566" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="hover:text-blue-600 transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="text-xs">© 2025 EQUITAS DRC. Tous droits réservés. Expertise RDC & OHADA.</p>
+        </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const attachmentInput = document.getElementById('attachment');
+            const fileStatus = document.getElementById('file-status');
+
+            menuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+            attachmentInput.addEventListener('change', () => {
+                if (attachmentInput.files.length > 0) {
+                    fileStatus.textContent = `${attachmentInput.files.length} fichier(s) attaché(s)`;
+                    fileStatus.className = "text-xs text-green-500 mb-4 h-4";
+                }
+            });
+
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const message = document.getElementById('message').value;
+                const whatsappMessage = `Bonjour EQUITAS DRC,\n\nJe suis ${name}.\nDemande : ${message}`;
+                window.location.href = `https://wa.me/243979616566?text=${encodeURIComponent(whatsappMessage)}`;
+            });
+
+            document.getElementById('email-submit').addEventListener('click', function() {
+                const name = document.getElementById('name').value;
+                const message = document.getElementById('message').value;
+                if(!name || !message) return alert("Veuillez remplir le nom et le message.");
+                window.location.href = `mailto:maitrefelixumen@gmail.com?subject=Consultation ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+            });
+        });
+    </script>
 </body>
 </html>
